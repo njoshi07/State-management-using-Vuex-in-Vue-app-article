@@ -7,7 +7,6 @@
 }
 
 #app {
-    /* background: lightgrey; */
     width: 90%;
     height: 100vh;
     margin: auto;
@@ -36,10 +35,6 @@
 .taskDetail p {
     margin: 20px; 
 }
-
-/* .taskDetail:first-child{
-    margin-top: 30px;
-} */
 
 .deleteTask {
     border:none;
