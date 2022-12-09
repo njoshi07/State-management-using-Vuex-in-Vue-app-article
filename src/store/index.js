@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    //
+    //Tasks List
     TasksLists: [],
     // Delete Task ID
     DeleteTaskId: "",
