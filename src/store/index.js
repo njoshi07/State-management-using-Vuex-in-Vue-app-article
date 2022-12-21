@@ -4,12 +4,13 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  // ***  STATE  *** //
   state: {
-    //Tasks List
     TasksLists: [],
-    // Delete Task ID
+
     DeleteTaskId: "",
   },
+  // ***  MUTATIONS  *** //
   mutations: {
     pullTasks(state, payload) {
       state.TasksLists = payload;
@@ -20,6 +21,7 @@ export default new Vuex.Store({
       state.DeleteTaskId = payload;
     },
   },
+  // ***  ACTIONS  *** //
   actions: {
     // Make API request
     async fetchTasks({ commit }) {
@@ -37,6 +39,7 @@ export default new Vuex.Store({
       }
     },
   },
+  // ***  GETTERS *** //
   getters: {
     updatedTasksList(state) {
       const result = state.TasksLists.filter(
@@ -45,6 +48,6 @@ export default new Vuex.Store({
       return (state.TasksLists = result);
     },
   },
-
-  modules: {},
+  // ***  MODULES *** //
+  modules: {}, // To break down big store into smaller stores
 });

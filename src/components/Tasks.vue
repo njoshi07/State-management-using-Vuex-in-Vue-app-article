@@ -26,7 +26,7 @@ export default {
     ...mapActions(["fetchTasks"]),
   },
   created() {
-    this.fetchTasks;
+    this.fetchTasks; // Calling Vuex Action here ,So API calls and fetch all data before component mount
   },
 };
 </script>
