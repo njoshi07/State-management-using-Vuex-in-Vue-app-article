@@ -1,6 +1,6 @@
 <template>
   <div class="taskDetail">
-    <h6>{{ taskDesc }}</h6>
+    <h6 class="taskDeatilDesc">{{ taskDesc }}</h6>
     <button class="deleteTask" @click="deleteTasks(index)">X</button>
   </div>
 </template>

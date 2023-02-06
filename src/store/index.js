@@ -9,7 +9,10 @@ export default new Vuex.Store({
     TasksLists: [],
 
     DeleteTaskId: "",
+
+    EnterNewTaskItem: "",
   },
+
   // ***  MUTATIONS  *** //
   mutations: {
     pullTasks(state, payload) {
@@ -20,7 +23,13 @@ export default new Vuex.Store({
     DeleteTask(state, payload) {
       state.DeleteTaskId = payload;
     },
+
+    // Enter New TASK
+    EnterTask(state, payload) {
+      state.EnterNewTaskItem = payload;
+    },
   },
+
   // ***  ACTIONS  *** //
   actions: {
     // Make API request
@@ -39,6 +48,7 @@ export default new Vuex.Store({
       }
     },
   },
+
   // ***  GETTERS *** //
   getters: {
     updatedTasksList(state) {
@@ -48,6 +58,7 @@ export default new Vuex.Store({
       return (state.TasksLists = result);
     },
   },
+
   // ***  MODULES *** //
   modules: {}, // To break down big store into smaller stores
 });
