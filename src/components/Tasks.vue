@@ -14,15 +14,13 @@
 
 <script>
 import Task from "./Task.vue";
-import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     Task,
   },
   computed: {
-    ...mapState(["TasksLists", "DeleteTaskId"]),
     ...mapGetters(["updatedTasksList"]),
-    ...mapMutations(["fetchTask"]),
     ...mapActions(["fetchTasks"]),
   },
   created() {
