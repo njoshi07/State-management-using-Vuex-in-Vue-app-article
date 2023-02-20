@@ -17,7 +17,7 @@ describe("Test Actions on vuex", () => {
     state = {
       TasksLists: [
         { id: 1, title: "task 1", completed: false },
-        { id: 1, title: "task 1", completed: false },
+        { id: 2, title: "task 1", completed: false },
       ],
     };
     mutations = {
